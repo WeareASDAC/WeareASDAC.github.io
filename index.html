@@ -116,6 +116,7 @@
 
         /* Logo styling */
         .logo {
+            color: var(--light);
             font-size: 2.5rem;
             font-weight: bold;
             letter-spacing: 2px;
@@ -1392,7 +1393,7 @@
     </header>
 
     <div class="container">
-        <main> {/* Added <main> tag for semantic structure */}
+        <main> 
 
             <section id="about">
                 <h2 class="section-title"><span>Who We Are</span>Creating Technology That Enhances Human Connection</h2>
@@ -1427,7 +1428,7 @@
             </section>
 
             <section id="clients" class="clients-section">
-                {/* This container is nested for the background color effect */}
+                
                 <div class="container">
                     <h2 class="section-title"><span>Our Clients</span>Trusted by Industry Leaders</h2>
                     <div class="clients-grid">
@@ -1435,7 +1436,7 @@
                             <div class="client-logo">BAE</div>
                             <h3 class="client-name">BAE Systems</h3>
                             <p class="client-description">
-                                Developed an integrated point-of-sale solution that streamlined operations and improved customer service across multiple locations.
+                                Developed multiple solutions that improved operations and improved user experience across multiple clients.
                             </p>
                         </div>
                         <div class="client-card">
@@ -1458,7 +1459,7 @@
 
             <section id="features">
                 <h2 class="section-title"><span>Our Philosophy</span>User-Centred Design Principles</h2>
-                <div class="features-grid"> {/* Changed class name */}
+                <div class="features-grid">
                     <div class="feature-card">
                         <div class="feature-icon">🎯</div>
                         <h3 class="feature-title">User-Focused Design</h3>
@@ -1502,8 +1503,7 @@
                 <div class="team-grid">
                     <div class="team-member">
                         <div class="member-photo">
-                            {/* Placeholder Image: Replace with actual image */}
-                            <img src="https://placehold.co/400x400/E60000/FFFFFF?text=SM" alt="Amar Sibia, Founder & CEO" loading="lazy" onerror="this.src='https://placehold.co/400x400/CCCCCC/FFFFFF?text=Photo'; this.onerror=null;">
+                            <img src="https://placehold.co/400x400/E60000/FFFFFF?text=AS" alt="Amar Sibia, Founder & CEO" loading="lazy" onerror="this.src='https://placehold.co/400x400/CCCCCC/FFFFFF?text=Photo'; this.onerror=null;">
                         </div>
                         <h3 class="member-name">Amar Sibia</h3>
                         <p class="member-role">Founder & CEO</p>
@@ -1523,7 +1523,7 @@
                             </p>
                             <div class="testimonial-author">
                                 <div class="author-photo">
-                                    {/* Placeholder Image: Replace with actual image */}
+                                
                                     <img src="https://placehold.co/100x100/CCCCCC/FFFFFF?text=EK" alt="Emily K." loading="lazy" onerror="this.src='https://placehold.co/100x100/CCCCCC/FFFFFF?text=Pic'; this.onerror=null;">
                                 </div>
                                 <div class="author-info">
@@ -1538,7 +1538,7 @@
                             </p>
                             <div class="testimonial-author">
                                 <div class="author-photo">
-                                    {/* Placeholder Image: Replace with actual image */}
+                                    
                                     <img src="https://placehold.co/100x100/CCCCCC/FFFFFF?text=JT" alt="James T." loading="lazy" onerror="this.src='https://placehold.co/100x100/CCCCCC/FFFFFF?text=Pic'; this.onerror=null;">
                                 </div>
                                 <div class="author-info">
@@ -1618,8 +1618,8 @@
                 <p>
                     Creating thoughtful technology that enriches daily life through intuitive design and meaningful functionality.
                 </p>
-                //{/* Social Links with Aria Labels */}
-                <div class="social-links">
+                
+                <div class="social-links" style="display: none;">
                     //{/* Replace # with actual links and use proper icons (SVG/Font) instead of emojis */}
                     <a href="#" class="social-link" aria-label="ASDAC on Twitter">🐦</a>
                     <a href="#" class="social-link" aria-label="ASDAC on Instagram">📷</a>
@@ -1643,7 +1643,7 @@
                 <ul class="footer-links">
                     <li><a href="mailto:hello@asdac.com">hello@asdac.co.uk</a></li>
                     
-                    <li><address>123 Innovation Street<br>London, UK</address></li> {/* Use address tag */}
+                    <li style="display: none;"><address>123 Innovation Street<br>London, UK</address></li> {/* Use address tag */}
                 </ul>
             </div>
         </div>

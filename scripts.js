@@ -8,9 +8,57 @@ const subscribeForm = document.getElementById('subscribe-form');
 const formMessageContainer = document.getElementById('form-message');
 const cursor = document.querySelector('.cursor');
 const cursorDot = document.querySelector('.cursor-dot');
+const themeToggleBtn = document.getElementById('theme-toggle');
+const mobileThemeToggleBtn = document.getElementById('mobile-theme-toggle');
 
 // --- Copyright Year ---
 document.getElementById('current-year').textContent = new Date().getFullYear();
+
+// --- Theme Toggle ---
+// Check for saved theme in localStorage
+function initTheme() {
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    if (savedTheme === 'dark' || (savedTheme === null && prefersDark)) {
+        document.body.classList.add('dark-theme');
+        updateThemeIcon(true);
+    } else {
+        document.body.classList.remove('dark-theme');
+        updateThemeIcon(false);
+    }
+}
+
+// Update theme icon based on current theme
+function updateThemeIcon(isDark) {
+    const icon = isDark ? '☀️' : '🌙';
+    themeToggleBtn.innerHTML = icon;
+    mobileThemeToggleBtn.innerHTML = icon;
+}
+
+// Toggle theme function
+function toggleTheme() {
+    const isDarkMode = document.body.classList.toggle('dark-theme');
+    localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+    updateThemeIcon(isDarkMode);
+}
+
+// Event listeners for theme toggle
+themeToggleBtn.addEventListener('click', toggleTheme);
+mobileThemeToggleBtn.addEventListener('click', toggleTheme);
+
+// Initialize theme on page load
+initTheme();
+
+// Listen for system theme changes
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+    if (localStorage.getItem('theme') === null) {
+        // Only auto-switch if user hasn't manually set a preference
+        const isDark = event.matches;
+        document.body.classList.toggle('dark-theme', isDark);
+        updateThemeIcon(isDark);
+    }
+});
 
 // --- Smooth Scrolling ---
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {

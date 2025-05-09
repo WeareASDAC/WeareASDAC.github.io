@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap&text=ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!@#$%^&*()_-+=[]{}|<>/~\'"`');
         /* Reset and base styles */
         :root {
             /* Main palette - Bold & Energetic */
@@ -1336,4 +1336,57 @@
              color: #4CAF50;
              margin-right: 0.5rem;
              font-weight: bold;
+        }
+
+        /* Accessibility */
+        .skip-to-content {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--accent);
+            color: var(--dark);
+            padding: 8px 16px;
+            z-index: 10000;
+            transition: top 0.3s;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .skip-to-content:focus {
+            top: 0;
+        }
+
+        /* Respect user preferences for reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+            /* Disable animations */
+            .scroll-indicator {
+                animation: none;
+            }
+            .shape1, .shape2, .shape3 {
+                animation: none;
+            }
+            .app-preview::before {
+                animation: none;
+            }
+            .app-card {
+                animation: none;
+            }
+            html {
+                scroll-behavior: auto;
+            }
+            .feature-card, .client-card, .team-member {
+                transition: box-shadow 0.3s ease;
+            }
+            .feature-card:hover, .client-card:hover, .team-member:hover {
+                transform: none;
+            }
+            .header-btn:hover {
+                transform: none;
+            }
+            .member-photo img {
+                transition: none;
+            }
+            .team-member:hover .member-photo img {
+                transform: none;
+            }
         }

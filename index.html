@@ -4,14 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ASDAC - Enriching Daily Lives Through Technology</title>
+    <meta name="description" content="ASDAC creates beautiful apps designed to simplify your routine and bring joy to everyday moments through thoughtful technology.">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="keywords" content="ASDAC, technology, mobile apps, user experience, human-centered design">
+    <meta name="author" content="Amar Sibia">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://weareasdac.github.io/">
+    <meta property="og:title" content="ASDAC - Enriching Daily Lives Through Technology">
+    <meta property="og:description" content="Creating beautiful apps designed to simplify your routine and bring joy to everyday moments.">
+    <meta property="og:image" content="https://weareasdac.github.io/assets/images/og-image.png">
+    
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ASDAC - Enriching Daily Lives Through Technology">
+    <meta name="twitter:description" content="Creating beautiful apps designed to simplify your routine and bring joy to everyday moments.">
+    <meta name="twitter:image" content="https://weareasdac.github.io/assets/images/og-image.png">
+    
+    <!-- Preload critical fonts -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" as="style">
+    <link rel="preload" href="https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCu173w5aXx-p7K4KLg.woff2" as="font" type="font/woff2" crossorigin>
+    
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
+    <a href="#main-content" class="skip-to-content">Skip to content</a>
+    
     <div class="cursor"></div>
     <div class="cursor-dot"></div>
 
-    <nav class="nav-container" id="navbar">
+    <nav class="nav-container" id="navbar" role="navigation" aria-label="Main Navigation">
         <div class="logo">ASDAC</div>
         <ul class="nav-links">
             <li><a href="#about" class="nav-link">About</a></li>
@@ -20,10 +45,10 @@
             <li><a href="#team" class="nav-link">Team</a></li>
             <li><a href="#coming-soon" class="nav-link">Coming Soon</a></li>
         </ul>
-        <button class="hamburger" id="hamburger-btn" aria-label="Open menu">☰</button>
+        <button class="hamburger" id="hamburger-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">☰</button>
     </nav>
 
-    <div class="mobile-menu" id="mobile-menu">
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Mobile navigation">
         <button class="close-menu" id="close-menu-btn" aria-label="Close menu">&times;</button>
         <ul class="nav-links">
             <li><a href="#about" class="nav-link">About</a></li>
@@ -53,10 +78,10 @@
     </header>
 
     <div class="container">
-        <main> 
+        <main id="main-content"> 
 
-            <section id="about">
-                <h2 class="section-title"><span>Who We Are</span>Creating Technology That Enhances Human Connection</h2>
+            <section id="about" aria-labelledby="about-title">
+                <h2 class="section-title" id="about-title"><span>Who We Are</span>Creating Technology That Enhances Human Connection</h2>
                 <div class="about-content">
                     <div class="about-text">
                         <p>
@@ -87,9 +112,9 @@
                 </div>
             </section>
 
-            <section id="clients" class="clients-section">
+            <section id="clients" class="clients-section" aria-labelledby="clients-title">
                 <div class="container">
-                    <h2 class="section-title"><span>Our Clients</span>Trusted Partners in Progress</h2>
+                    <h2 class="section-title" id="clients-title"><span>Our Clients</span>Trusted Partners in Progress</h2>
                     <div class="clients-grid">
                         <div class="client-card">
                             <div class="client-logo">C</div>
@@ -116,8 +141,8 @@
                 </div>
             </section>
 
-            <section id="features">
-                <h2 class="section-title"><span>Our Philosophy</span>User-Centred Design Principles</h2>
+            <section id="features" aria-labelledby="features-title">
+                <h2 class="section-title" id="features-title"><span>Our Philosophy</span>User-Centred Design Principles</h2>
                 <div class="features-grid">
                     <div class="feature-card">
                         <div class="feature-icon">🎯</div>
@@ -152,8 +177,8 @@
                 </div>
             </section>
 
-            <section id="team" class="team-section">
-                <h2 class="section-title"><span>Our Team</span>The Passionate People Behind ASDAC</h2>
+            <section id="team" class="team-section" aria-labelledby="team-title">
+                <h2 class="section-title" id="team-title"><span>Our Team</span>The Passionate People Behind ASDAC</h2>
                 <div class="team-intro">
                     <p>
                         We're a diverse team of designers, developers, and thinkers united by our shared vision of creating technology that truly enriches people's lives. Each of us brings unique perspectives and skills, fostering a collaborative environment where innovation thrives.
@@ -171,10 +196,10 @@
                 </div>
             </section>
 
-            <section id="testimonials" class="testimonials-section" style="display: none;"> {/* Keep hidden for now */}
+            <section id="testimonials" class="testimonials-section" style="display: none;" aria-labelledby="testimonials-title"> {/* Keep hidden for now */}
                 <div class="testimonials-bg"></div>
                 <div class="testimonials-container">
-                    <h2 class="section-title"><span>User Stories</span>Why People Love Our Approach</h2>
+                    <h2 class="section-title" id="testimonials-title"><span>User Stories</span>Why People Love Our Approach</h2>
                     <div class="testimonials-grid">
                         <div class="testimonial-card">
                             <p class="testimonial-text">
@@ -210,10 +235,10 @@
                 </div>
             </section>
 
-            <section id="coming-soon" class="coming-soon-section">
+            <section id="coming-soon" class="coming-soon-section" aria-labelledby="coming-soon-title">
             
                 <div class="container">
-                    <h2 class="section-title"><span>Coming Soon</span>Our First App Is Almost Ready</h2>
+                    <h2 class="section-title" id="coming-soon-title"><span>Coming Soon</span>Our First App Is Almost Ready</h2>
                     <div class="app-preview">
                         <h3 class="coming-soon">DailyFlow</h3>
                         <p>
@@ -221,9 +246,9 @@
                         </p>
                         <p>Want to be the first to know when we launch? Subscribe below:</p>
 
-                        <form class="subscribe-form" id="subscribe-form">
+                        <form class="subscribe-form" id="subscribe-form" aria-describedby="form-message">
                             <label for="email-input" class="sr-only">Email Address</label>
-                            <input type="email" id="email-input" class="subscribe-input" placeholder="Your email address" required>
+                            <input type="email" id="email-input" class="subscribe-input" placeholder="Your email address" required aria-required="true" autocomplete="email">
                             <button type="submit" class="subscribe-button">Join Waitlist</button>
                         </form>
                         <div id="form-message" role="status" aria-live="polite"></div>
@@ -270,7 +295,7 @@
 
         </main>
     </div>
-    <footer>
+    <footer role="contentinfo">
         <div class="footer-content">
             <div class="footer-brand">
                 <div class="logo">ASDAC</div>
@@ -314,6 +339,6 @@
         </div>
     </footer>
 
-    <script src="scripts.js"></script>
+    <script src="scripts.js" defer></script>
 </body>
 </html>

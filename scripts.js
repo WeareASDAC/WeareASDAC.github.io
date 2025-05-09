@@ -17,6 +17,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
         const targetId = this.getAttribute('href');
+        
+        // Skip smooth scrolling if user prefers reduced motion
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        
         const targetElement = document.querySelector(targetId);
 
         if (targetElement) {
@@ -27,13 +31,14 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
             window.scrollTo({
                 top: offsetPosition,
-                behavior: 'smooth'
+                behavior: prefersReducedMotion ? 'auto' : 'smooth'
             });
 
             // Close mobile menu if open after clicking a link
             if (mobileMenu.classList.contains('active')) {
                 mobileMenu.classList.remove('active');
                 hamburgerBtn.setAttribute('aria-expanded', 'false');
+                mobileMenu.setAttribute('aria-hidden', 'true');
             }
         }
     });
@@ -52,11 +57,21 @@ window.addEventListener('scroll', () => {
 hamburgerBtn.addEventListener('click', () => {
     mobileMenu.classList.add('active');
     hamburgerBtn.setAttribute('aria-expanded', 'true');
+    mobileMenu.setAttribute('aria-hidden', 'false');
+    
+    // Focus the first link in the mobile menu
+    const firstLink = mobileMenu.querySelector('.nav-link');
+    if (firstLink) {
+        firstLink.focus();
+    }
 });
 
 closeMenuBtn.addEventListener('click', () => {
     mobileMenu.classList.remove('active');
     hamburgerBtn.setAttribute('aria-expanded', 'false');
+    mobileMenu.setAttribute('aria-hidden', 'true');
+    // Return focus to the hamburger button
+    hamburgerBtn.focus();
 });
 
 // Close mobile menu when clicking a link inside it
@@ -64,6 +79,7 @@ mobileNavLinks.forEach(link => {
     link.addEventListener('click', () => {
         mobileMenu.classList.remove('active');
         hamburgerBtn.setAttribute('aria-expanded', 'false');
+        mobileMenu.setAttribute('aria-hidden', 'true');
     });
 });
 
@@ -72,12 +88,34 @@ document.addEventListener('click', (event) => {
     if (!mobileMenu.contains(event.target) && !hamburgerBtn.contains(event.target) && mobileMenu.classList.contains('active')) {
         mobileMenu.classList.remove('active');
         hamburgerBtn.setAttribute('aria-expanded', 'false');
+        mobileMenu.setAttribute('aria-hidden', 'true');
     }
 });
 
+// --- Keyboard Accessibility ---
+// Close mobile menu with Escape key
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && mobileMenu.classList.contains('active')) {
+        mobileMenu.classList.remove('active');
+        hamburgerBtn.setAttribute('aria-expanded', 'false');
+        mobileMenu.setAttribute('aria-hidden', 'true');
+        hamburgerBtn.focus();
+    }
+});
 
 // --- Intersection Observer for Animations ---
 const animateOnScroll = (elements, animationClass = 'fade-in', threshold = 0.1, rootMargin = '0px 0px -100px 0px') => {
+    // Skip animations if user prefers reduced motion
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReducedMotion) {
+        elements.forEach(el => {
+            el.classList.add(animationClass);
+            el.style.opacity = '1';
+            el.style.transform = 'translateY(0)';
+        });
+        return;
+    }
+    
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -108,7 +146,10 @@ animateOnScroll(document.querySelectorAll('.section-title, .about-text, .team-in
 
 // Apply fade-in with stagger to cards
 cardsToAnimate.forEach((card, index) => {
-     card.style.transitionDelay = `${index * 0.1}s`; // Add stagger
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!prefersReducedMotion) {
+        card.style.transitionDelay = `${index * 0.1}s`; // Add stagger
+    }
 });
 animateOnScroll(cardsToAnimate);
 
@@ -141,7 +182,7 @@ subscribeForm.addEventListener('submit', function(e) {
         if (success) {
             displayFormMessage(`
                 <p>
-                    <span class="icon">✓</span>
+                    <span class="icon" aria-hidden="true">✓</span>
                     Thank you! <strong>${email}</strong> is on the waitlist. We'll notify you at launch!
                 </p>`,
                 'success'
@@ -176,7 +217,7 @@ function displayFormMessage(message, type = 'info') {
 }
 
 // --- Custom Cursor Movement (Desktop Only) ---
-if (window.matchMedia('(min-width: 1024px)').matches) {
+if (window.matchMedia('(min-width: 1024px)').matches && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     window.addEventListener('mousemove', e => {
         if (cursor) cursor.style.left = e.clientX + 'px';
         if (cursor) cursor.style.top = e.clientY + 'px';

@@ -66,7 +66,7 @@
 - [ ] **Performance Metrics**
   - [x] Optimize Core Web Vitals (minified CSS/JS, explicit image dimensions)
   - [x] Minify CSS and JavaScript
-  - [ ] Implement proper caching strategies
+  - [x] Implement proper caching strategies (added .nojekyll for GitHub Pages)
 
 - [ ] **Analytics and Monitoring**
   - [ ] Add privacy-friendly analytics

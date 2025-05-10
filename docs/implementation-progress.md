@@ -42,11 +42,11 @@
 
 ## Currently Implementing
 
-- [ ] **Image Optimization**
-  - [ ] Create WebP format for all placeholder images
-  - [ ] Implement responsive image sizes using srcset
-  - [ ] Add lazy loading for non-critical images
-  - [ ] Create OG image for social sharing
+- [x] **Image Optimization**
+  - [x] Create WebP format for all placeholder images (profile.webp already used, OG image generated)
+  - [x] Create OG image for social sharing (og-image.png, og-image.webp)
+  - [x] Add lazy loading for non-critical images (team member, testimonials)
+  - [x] Implement responsive image sizes using srcset (profile.webp)
 
 ## Up Next
 

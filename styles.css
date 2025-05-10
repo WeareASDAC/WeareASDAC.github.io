@@ -284,6 +284,38 @@ header {
     font-size: 1.5rem;
     cursor: pointer;
     z-index: 2001; /* Above mobile menu overlay */
+    min-width: 48px;
+    min-height: 48px;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+.hamburger:focus, .hamburger:active {
+    outline: 2px solid var(--accent);
+    background: rgba(255,255,255,0.1);
+    box-shadow: 0 0 0 4px var(--accent);
+}
+
+/* Close button for mobile menu */
+.close-menu {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+    min-width: 48px;
+    min-height: 48px;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+.close-menu:focus, .close-menu:active {
+    outline: 2px solid var(--accent);
+    background: rgba(255,255,255,0.1);
+    box-shadow: 0 0 0 4px var(--accent);
 }
 
 /* Mobile Menu Styling */
@@ -302,6 +334,8 @@ header {
     align-items: center;
     transition: right 0.5s cubic-bezier(0.77, 0, 0.175, 1);
     box-shadow: -5px 0 15px rgba(0,0,0,0.2);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 .mobile-menu.active {
@@ -317,18 +351,6 @@ header {
 
 .mobile-menu .nav-link {
     font-size: 1.5rem;
-}
-
-/* Close button for mobile menu */
-.close-menu {
-    position: absolute;
-    top: 1.5rem;
-    right: 1.5rem;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 1.8rem;
-    cursor: pointer;
 }
 
 /* Header Content Area */
@@ -734,6 +756,7 @@ section:last-child {
     border: 1px solid var(--card-border);
     overflow: hidden;
     box-shadow: 0 5px 15px var(--shadow-color); /* Softer shadow */
+    gap: 0.5rem;
 }
 
 .subscribe-input {
@@ -741,13 +764,17 @@ section:last-child {
     background: transparent;
     border: none;
     padding: 1.2rem 1.5rem;
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: var(--text-color);
     outline: none;
+    min-height: 48px;
+    border-radius: 50px;
+    transition: box-shadow 0.2s, border 0.2s;
 }
-
-.subscribe-input::placeholder {
-    color: var(--placeholder-color);
+.subscribe-input:focus {
+    outline: 2px solid var(--accent);
+    box-shadow: 0 0 0 4px var(--accent);
+    background: rgba(255,255,255,0.15);
 }
 
 .subscribe-button {
@@ -758,32 +785,19 @@ section:last-child {
     border-radius: 50px;
     cursor: pointer;
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 1.1rem;
     letter-spacing: 1px;
     transition: all 0.3s ease;
     text-transform: uppercase;
     position: relative;
     overflow: hidden;
+    min-height: 48px;
+    min-width: 48px;
 }
-
-.subscribe-button::before { /* Shine effect */
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-    transition: left 0.7s ease;
-}
-
-.subscribe-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(255, 193, 7, 0.4); /* Accent shadow */
-}
-
-.subscribe-button:hover::before {
-    left: 100%;
+.subscribe-button:focus, .subscribe-button:active {
+    outline: 2px solid var(--primary);
+    box-shadow: 0 0 0 4px var(--primary);
+    background: #ffe082;
 }
 
 /* Mockup Device */
@@ -1337,6 +1351,7 @@ footer {
         border: none;
         box-shadow: none;
         max-width: 100%; /* Allow full width */
+        gap: 1rem;
     }
 
     .subscribe-input {
@@ -1344,15 +1359,16 @@ footer {
         border: 1px solid rgba(0, 0, 0, 0.1);
         border-radius: 50px;
         padding: 1.2rem 1.5rem;
-        margin-bottom: 1rem;
+        margin-bottom: 0;
         color: var(--text-color);
+        font-size: 1.1rem;
+        min-height: 48px;
     }
-     .subscribe-input::placeholder {
-         color: rgba(0,0,0, 0.5);
-     }
-
-    .subscribe-button {
+     .subscribe-button {
         width: 100%;
+        font-size: 1.1rem;
+        min-height: 48px;
+        min-width: 48px;
     }
     .footer-content {
         text-align: center; /* Center footer columns */

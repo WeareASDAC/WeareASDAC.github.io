@@ -64,9 +64,9 @@
 ## Future Tasks
 
 - [ ] **Performance Metrics**
-  - [ ] Optimize Core Web Vitals
+  - [x] Optimize Core Web Vitals (minified CSS/JS, explicit image dimensions)
+  - [x] Minify CSS and JavaScript
   - [ ] Implement proper caching strategies
-  - [ ] Minify CSS and JavaScript
 
 - [ ] **Analytics and Monitoring**
   - [ ] Add privacy-friendly analytics

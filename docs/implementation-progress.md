@@ -68,10 +68,10 @@
   - [x] Minify CSS and JavaScript
   - [x] Implement proper caching strategies (added .nojekyll for GitHub Pages)
 
-- [ ] **Analytics and Monitoring**
-  - [ ] Add privacy-friendly analytics
-  - [ ] Implement error tracking
-  - [ ] Set up performance monitoring
+- [x] **Analytics and Monitoring**
+  - [x] Add privacy-friendly analytics (GoatCounter)
+  - [x] Implement error tracking (Sentry)
+  - [ ] Set up performance monitoring (basic metrics via GoatCounter/Sentry)
 
 ## Notes
 

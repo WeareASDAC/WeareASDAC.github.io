@@ -85,6 +85,14 @@ This document outlines the technical specifications and implementation details f
   - Success/error state handling
   - Accessible form controls
 
+- **Hero Background**
+  - Uses a Three.js-powered WebGL canvas for an animated gradient mesh
+  - Custom vertex and fragment shaders create smooth color transitions and wave effects
+  - Colors are based on brand palette (primary, secondary, accent)
+  - Fully responsive: canvas resizes to viewport
+  - Accessibility: canvas is aria-hidden and decorative only
+  - Replaces previous CSS-based blurred shapes for a more dynamic, modern look
+
 ## Performance Targets
 
 - Lighthouse Performance Score: > 90

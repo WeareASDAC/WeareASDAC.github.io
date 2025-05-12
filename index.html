@@ -76,11 +76,7 @@
     </div>
 
     <header>
-        <div class="bg-animation">
-            <div class="bg-shape shape1"></div>
-            <div class="bg-shape shape2"></div>
-            <div class="bg-shape shape3"></div>
-        </div>
+        <canvas id="hero-bg-canvas" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:0;display:block;" aria-hidden="true"></canvas>
 
         <div class="header-content">
             <h1 class="header-title">Enriching Daily Lives Through Thoughtful Technology</h1>
@@ -360,6 +356,8 @@
     <script data-goatcounter="https://asdac.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
     <!-- Sentry Error Tracking -->
     <script src="https://js-de.sentry-cdn.com/0e0363708db3e54fbc55722e0abca258.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.153.0/build/three.min.js"></script>
+    <script src="hero-bg.js" defer></script>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",

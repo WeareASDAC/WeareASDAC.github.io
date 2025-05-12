@@ -40,6 +40,12 @@
   - [x] Added localStorage for theme preference persistence
   - [x] Ensured proper color contrast in dark mode
 
+- [x] **WebGL Hero Background**
+  - [x] Replaced CSS-based hero background with a Three.js animated gradient mesh
+  - [x] Implemented a custom shader for smooth color transitions and wave effects
+  - [x] Ensured full responsiveness and accessibility (decorative, aria-hidden)
+  - [x] Integrated with pure HTML/JS workflow (no frameworks)
+
 ## Currently Implementing
 
 - [x] **Image Optimization**

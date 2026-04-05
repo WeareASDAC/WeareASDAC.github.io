@@ -6,59 +6,8 @@ const closeMenuBtn = document.getElementById('close-menu-btn');
 const mobileNavLinks = mobileMenu.querySelectorAll('.nav-link');
 const subscribeForm = document.getElementById('subscribe-form');
 const formMessageContainer = document.getElementById('form-message');
-const cursor = document.querySelector('.cursor');
-const cursorDot = document.querySelector('.cursor-dot');
-const themeToggleBtn = document.getElementById('theme-toggle');
-const mobileThemeToggleBtn = document.getElementById('mobile-theme-toggle');
-
 // --- Copyright Year ---
 document.getElementById('current-year').textContent = new Date().getFullYear();
-
-// --- Theme Toggle ---
-// Check for saved theme in localStorage
-function initTheme() {
-    const savedTheme = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    
-    if (savedTheme === 'dark' || (savedTheme === null && prefersDark)) {
-        document.body.classList.add('dark-theme');
-        updateThemeIcon(true);
-    } else {
-        document.body.classList.remove('dark-theme');
-        updateThemeIcon(false);
-    }
-}
-
-// Update theme icon based on current theme
-function updateThemeIcon(isDark) {
-    const icon = isDark ? '☀️' : '🌙';
-    themeToggleBtn.innerHTML = icon;
-    mobileThemeToggleBtn.innerHTML = icon;
-}
-
-// Toggle theme function
-function toggleTheme() {
-    const isDarkMode = document.body.classList.toggle('dark-theme');
-    localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
-    updateThemeIcon(isDarkMode);
-}
-
-// Event listeners for theme toggle
-themeToggleBtn.addEventListener('click', toggleTheme);
-mobileThemeToggleBtn.addEventListener('click', toggleTheme);
-
-// Initialize theme on page load
-initTheme();
-
-// Listen for system theme changes
-window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
-    if (localStorage.getItem('theme') === null) {
-        // Only auto-switch if user hasn't manually set a preference
-        const isDark = event.matches;
-        document.body.classList.toggle('dark-theme', isDark);
-        updateThemeIcon(isDark);
-    }
-});
 
 // --- Smooth Scrolling ---
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -203,7 +152,7 @@ animateOnScroll(cardsToAnimate);
 
 
 // --- Subscribe Form Handling ---
-subscribeForm.addEventListener('submit', function(e) {
+if (subscribeForm) subscribeForm.addEventListener('submit', function(e) {
     e.preventDefault();
     const emailInput = this.querySelector('input[type="email"]');
     const email = emailInput.value.trim(); // Trim whitespace
@@ -263,27 +212,3 @@ function displayFormMessage(message, type = 'info') {
          }, 6000); // Clear after 6 seconds
      }
 }
-
-// --- Custom Cursor Movement (Desktop Only) ---
-if (window.matchMedia('(min-width: 1024px)').matches && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    window.addEventListener('mousemove', e => {
-        if (cursor) cursor.style.left = e.clientX + 'px';
-        if (cursor) cursor.style.top = e.clientY + 'px';
-        if (cursorDot) cursorDot.style.left = e.clientX + 'px';
-        if (cursorDot) cursorDot.style.top = e.clientY + 'px';
-    });
-
-    // Add hover effects for cursor
-    document.querySelectorAll('a, button, .feature-card, .client-card, .team-member').forEach(el => {
-        el.addEventListener('mouseenter', () => {
-            if(cursor) cursor.style.transform = 'translate(-50%, -50%) scale(1.5)';
-            if(cursor) cursor.style.background = 'var(--accent)';
-            if(cursor) cursor.style.opacity = '0.3';
-        });
-        el.addEventListener('mouseleave', () => {
-            if(cursor) cursor.style.transform = 'translate(-50%, -50%) scale(1)';
-            if(cursor) cursor.style.background = 'transparent';
-            if(cursor) cursor.style.opacity = '1';
-        });
-    });
-} 

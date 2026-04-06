@@ -2,26 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.asdac.co.uk/</loc>
+    <lastmod>2026-04-06</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.asdac.co.uk/#about</loc>
-    <priority>0.8</priority>
+    <loc>https://www.asdac.co.uk/session-timerz/privacy.html</loc>
+    <lastmod>2026-04-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
-  <url>
-    <loc>https://www.asdac.co.uk/#clients</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.asdac.co.uk/#features</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.asdac.co.uk/#team</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.asdac.co.uk/#coming-soon</loc>
-    <priority>0.7</priority>
-  </url>
-</urlset> 
+</urlset>

@@ -3,13 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#E60000">
     <title>Privacy Policy — Session Timerz | ASDAC</title>
     <meta name="description" content="Session Timerz collects no personal data. All data stays on your Mac.">
-    <meta name="robots" content="index, follow">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <link rel="canonical" href="https://www.asdac.co.uk/session-timerz/privacy.html">
+    <meta property="og:site_name" content="ASDAC">
+    <meta property="og:title" content="Privacy Policy — Session Timerz">
+    <meta property="og:description" content="Session Timerz collects no personal data. All data stays on your Mac.">
+    <meta property="og:url" content="https://www.asdac.co.uk/session-timerz/privacy.html">
+    <meta property="og:type" content="website">
 
-    <!-- Preload critical fonts -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" as="style">
+    <!-- Preconnect to font origins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Preload critical font file -->
     <link rel="preload" href="https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCu173w5aXx-p7K4KLg.woff2" as="font" type="font/woff2" crossorigin>
 
     <link rel="stylesheet" href="../styles.min.css">
@@ -90,16 +98,15 @@
         .policy-section a {
             color: var(--primary);
             font-weight: 500;
-            text-decoration: none;
         }
 
         .policy-section a:hover {
-            text-decoration: underline;
+            text-decoration: none;
         }
 
         .policy-meta {
             font-size: 0.9rem;
-            opacity: 0.5;
+            opacity: 0.65;
             margin-top: 3.5rem;
             padding-top: 1.5rem;
             border-top: 1px solid var(--card-border);
@@ -120,7 +127,7 @@
     <a href="#main-content" class="skip-to-content">Skip to content</a>
 
 
-    <nav class="nav-container" id="navbar" role="navigation" aria-label="Main Navigation">
+    <nav class="nav-container" id="navbar" aria-label="Main Navigation">
         <a href="/" class="logo" style="text-decoration: none; color: var(--light);">ASDAC</a>
         <ul class="nav-links">
             <li><a href="/#about" class="nav-link">About</a></li>
@@ -218,10 +225,36 @@
         </div>
     </footer>
 
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.asdac.co.uk"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Session Timerz",
+                "item": "https://www.asdac.co.uk/#apps"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Privacy Policy",
+                "item": "https://www.asdac.co.uk/session-timerz/privacy.html"
+            }
+        ]
+    }
+    </script>
     <script src="../scripts.min.js" defer></script>
     <!-- GoatCounter Analytics -->
-    <script data-goatcounter="https://asdac.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+    <script data-goatcounter="https://asdac.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
     <!-- Sentry Error Tracking -->
-    <script src="https://js-de.sentry-cdn.com/0e0363708db3e54fbc55722e0abca258.min.js" crossorigin="anonymous"></script>
+    <script src="https://js-de.sentry-cdn.com/0e0363708db3e54fbc55722e0abca258.min.js" crossorigin="anonymous" defer></script>
 </body>
 </html>

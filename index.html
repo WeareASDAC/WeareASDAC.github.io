@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#E60000" />
     <title>ASDAC - Enriching Daily Lives Through Technology</title>
     <meta
       name="description"
@@ -15,9 +16,10 @@
       content="ASDAC, technology, mobile apps, user experience, human-centered design"
     />
     <meta name="author" content="Amar Sibia" />
-    <meta name="robots" content="index, follow" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
 
     <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:site_name" content="ASDAC" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.asdac.co.uk/" />
     <meta
@@ -30,21 +32,15 @@
     />
     <meta
       property="og:image"
-      content="https://www.asdac.co.uk/assets/images/og-image.webp"
+      content="https://www.asdac.co.uk/assets/images/og-image.png"
     />
-    <meta property="og:image:type" content="image/webp" />
+    <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <!-- Fallback for platforms that do not support WebP -->
     <meta
       property="og:image:alt"
       content="ASDAC - Enriching Daily Lives Through Technology"
     />
-    <meta
-      property="og:image"
-      content="https://www.asdac.co.uk/assets/images/og-image.png"
-    />
-    <meta property="og:image:type" content="image/png" />
 
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -58,22 +54,13 @@
     />
     <meta
       name="twitter:image"
-      content="https://www.asdac.co.uk/assets/images/og-image.webp"
-    />
-    <meta name="twitter:image:type" content="image/webp" />
-    <!-- Fallback for Twitter if WebP is not supported -->
-    <meta
-      name="twitter:image"
       content="https://www.asdac.co.uk/assets/images/og-image.png"
     />
-    <meta name="twitter:image:type" content="image/png" />
 
-    <!-- Preload critical fonts -->
-    <link
-      rel="preload"
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap"
-      as="style"
-    />
+    <!-- Preconnect to font origins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Preload critical font file -->
     <link
       rel="preload"
       href="https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCu173w5aXx-p7K4KLg.woff2"
@@ -94,7 +81,6 @@
     <nav
       class="nav-container"
       id="navbar"
-      role="navigation"
       aria-label="Main Navigation"
     >
       <div class="logo">ASDAC</div>
@@ -161,7 +147,7 @@
           We create beautiful apps designed to simplify your routine and bring
           joy to everyday moments.
         </p>
-        <a href="#coming-soon" class="header-btn">Get Early Access</a>
+        <a href="#apps" class="header-btn">See Our Apps</a>
       </div>
 
       <a href="#about" class="scroll-indicator" aria-label="Scroll down"> ↓ </a>
@@ -394,10 +380,6 @@
                   src="assets/images/profile.webp"
                   alt="Amar Sibia, Founder & CEO"
                   loading="lazy"
-                  srcset="
-                    assets/images/profile.webp 1x,
-                    assets/images/profile.webp 2x
-                  "
                   width="400"
                   height="400"
                   onerror="
@@ -493,12 +475,13 @@
             </div>
 
             <!-- Screenshot column -->
-            <div class="app-showcase-visual" aria-hidden="true">
+            <div class="app-showcase-visual">
               <img
                 src="assets/images/session-timerz-preview.png"
                 alt="Session Timerz showing a Deep Work session in progress"
                 class="app-preview-img"
                 width="320"
+                height="426"
                 loading="lazy"
               >
             </div>
@@ -512,7 +495,7 @@
           style="display: none"
           aria-labelledby="testimonials-title"
         >
-          {/* Keep hidden for now */}
+          <!-- Keep hidden for now -->
           <div class="testimonials-bg"></div>
           <div class="testimonials-container">
             <h2 class="section-title" id="testimonials-title">
@@ -700,7 +683,7 @@
         <div class="footer-contact">
           <h3 class="footer-heading">Contact</h3>
           <ul class="footer-links">
-            <li><a href="mailto:hello@asdac.com">hello@asdac.co.uk</a></li>
+            <li><a href="mailto:hello@asdac.co.uk">hello@asdac.co.uk</a></li>
 
             <li style="display: none">
               <address>123 Innovation Street<br />London, UK</address>
@@ -721,14 +704,15 @@
     <script
       data-goatcounter="https://asdac.goatcounter.com/count"
       async
-      src="//gc.zgo.at/count.js"
+      src="https://gc.zgo.at/count.js"
     ></script>
     <!-- Sentry Error Tracking -->
     <script
       src="https://js-de.sentry-cdn.com/0e0363708db3e54fbc55722e0abca258.min.js"
       crossorigin="anonymous"
+      defer
     ></script>
-    <script src="https://cdn.jsdelivr.net/npm/three@0.153.0/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.153.0/build/three.min.js" defer></script>
     <script src="hero-bg.js" defer></script>
     <script type="application/ld+json">
       {
@@ -745,6 +729,22 @@
             "contactType": "customer support"
           }
         ]
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Session Timerz",
+        "operatingSystem": "macOS 14+",
+        "applicationCategory": "ProductivityApplication",
+        "description": "Menu bar timer for structured work sessions on Mac. Build templates with named blocks — Focus, Break, Review — and get a live countdown without switching windows.",
+        "url": "https://www.asdac.co.uk/#apps",
+        "author": {
+          "@type": "Organization",
+          "name": "ASDAC",
+          "url": "https://www.asdac.co.uk"
+        }
       }
     </script>
   </body>
